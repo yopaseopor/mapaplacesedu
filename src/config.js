@@ -1575,11 +1575,92 @@ var config = {
 				});
 				return style;
 			}
- },
+},
+ {
+
+   group: 'Primària',
+   title: 'Sí',
+	geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria.geojson',
+	iconSrc: imgSrc + 'base/circle.svg',
+	iconStyle: 'background-color:rgba(0,255,0,1)',
+   style: function (feature) {
+    var key_regex = /^NOM/
+    var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+    var name = feature.get(name_key) || '';
+    var styles = {
+     'PRIMARIA': {
+      'SI': new ol.style.Style({
+					image: new ol.style.Circle({
+						fill: new ol.style.Fill({
+					color: 'rgba(64,224,208,0.4)'
+				});
+						stroke: new ol.style.Stroke({
+					color: 'rgba(0,255,0,1)',
+					width: 1
+				});
+						radius: 5
+					}),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'Nom_Local': {
+      'Sn': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'traffic_sign': {
+      'ES:B1a': new ol.style.Style({
+       zIndex: 100,
+       stroke: new ol.style.Stroke({
+        color: 'rgba(246, 99, 79, 1.0)',
+        width: 1
+       }),
+       fill: new ol.style.Fill({
+        color: 'rgba(246, 99, 79, 0.3)'
+       }),
+       text: new ol.style.Text({
+        text: name
+       })
+      })
+     }
+    };
+    for (var key in styles) {
+     var value = feature.get(key);
+     if (value !== undefined) {
+      for (var regexp in styles[key]) {
+       if (new RegExp(regexp).test(value)) {
+        return styles[key][regexp];
+       }
+      }
+     }
+    }
+    return null;
+   } 
+   
+},
 	
 		{
 			group: 'Primària',
-			title: 'Sí',
+			title: 'NO',
 			geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria.geojson',
 			iconSrc: imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(0,255,0,1)',
