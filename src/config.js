@@ -1584,20 +1584,15 @@ var config = {
 	iconSrc: imgSrc + 'base/circle.svg',
 	iconStyle: 'background-color:rgba(0,255,0,1)',
    style: function (feature) {
-    var key_regex = /^NOM/
+    var key_regex = /^Nom_Local/
     var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
     var name = feature.get(name_key) || '';
     var styles = {
-     'PRIMARIA': {
-      'SI': new ol.style.Style({
+     'Primària': {
+      'Sí': new ol.style.Style({
 					image: new ol.style.Circle({
-						fill: new ol.style.Fill({
-					color: 'rgba(64,224,208,0.4)'
-				});
-						stroke: new ol.style.Stroke({
-					color: 'rgba(0,255,0,1)',
-					width: 1
-				});
+						fill: fill,
+						stroke: stroke,
 						radius: 5
 					}),
        text: new ol.style.Text({
@@ -1660,7 +1655,7 @@ var config = {
 	
 		{
 			group: 'Primària',
-			title: 'NO',
+			title: 'Sí',
 			geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria.geojson',
 			iconSrc: imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(0,255,0,1)',
