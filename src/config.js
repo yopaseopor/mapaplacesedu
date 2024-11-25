@@ -1552,7 +1552,7 @@ var config = {
     var name = feature.get(name_key) || '';
     var styles = {
      'ESPECIALITAT': {
-      'PMU': new ol.style.Style({
+      'EES': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Citroen_2022.svg/1024px-Citroen_2022.svg.png',
        rotation: 0,
