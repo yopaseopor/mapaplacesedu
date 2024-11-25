@@ -1619,7 +1619,7 @@ var config = {
 
    group: 'Primària',
    title: 'Test3',
-   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/test.geojson',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
@@ -1632,7 +1632,7 @@ var config = {
        image: new ol.style.Icon({
        src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Citroen_2022.svg/1024px-Citroen_2022.svg.png',
        rotation: 0,
-       scale: 0.10
+       scale: 1
       }),
        text: new ol.style.Text({
         text: name,
