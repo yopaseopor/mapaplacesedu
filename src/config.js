@@ -1542,11 +1542,11 @@ var config = {
 		{
 			group: 'Primària',
 			title: 'No',
-			query: '(nwr[~"^check_date$"~"202[0-9]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(0,255,0,1)',
+	geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria.geojson',
+	iconSrc: imgSrc + 'base/circle.svg',
+	iconStyle: 'background-color:rgba(0,255,0,1)',
 			style: function (feature) {
-				var key_regex = /^check_date$/
+				var key_regex = /^PRIMARIA$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
