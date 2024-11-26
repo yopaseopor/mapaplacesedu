@@ -1618,17 +1618,17 @@ var config = {
  {
 
    group: 'Primària',
-   title: 'EES3',
+   title: 'EES4',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/EES3.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
-    var key_regex = /^COD_LLOC/
+    var key_regex = /^Denominació completa/
     var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
     var name = feature.get(name_key) || '';
     var styles = {
      'COD_LLOC': {
-      'EES': new ol.style.Style({
+      'AAP': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Citroen_2022.svg/1024px-Citroen_2022.svg.png',
        rotation: 0,
