@@ -1618,8 +1618,8 @@ var config = {
  {
 
    group: 'Primària',
-   title: 'Test21',
-   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria21.geojson',
+   title: 'Test22',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria22.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
