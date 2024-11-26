@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "EES",
+"name": "EES2",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "COMPLEXITAT": "CMC", "EDIF": "EDIF", "COD_LLOC": "505", "QUALIFICADOR": "ORD", "TOT_DOT": 1.0, "CS": null, "DD": null, "IN": 1.0, "NF": null, "PP": null, "PS": null, "PG": null, "RF": null, "Codi centre": 8075384, "Denominació completa": "Institut Escola La Mina", "Adreça": "rbla. de la Mina, 36", "Codi postal": 8930, "Telèfon": 934626823, "Nom DM": null, "Nom localitat": "Sant Adrià de Besòs", "lon": "2.221556", "lat": "41.4154", "E-mail centre": "a8075384@xtec.cat", "URL": "http://agora.xtec.cat/ins-esc-santadria", "EINF2C": "EINF2C", "EPRI": "EPRI" }, "geometry": { "type": "Point", "coordinates": [ 2.221556, 41.4154 ] } },
