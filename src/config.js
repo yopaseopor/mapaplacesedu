@@ -1620,7 +1620,7 @@ var config = {
    group: 'Primària',
    title: 'EES4',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/EES4.geojson',
-iconSrc: imgSrc + 'base/circle.svg',
+	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
     var key_regex = /^Denominació completa/
@@ -1628,15 +1628,12 @@ iconSrc: imgSrc + 'base/circle.svg',
     var name = feature.get(name_key) || '';
     var styles = {
      'COD_LLOC': {
-      'AAP':  new ol.style.Style({
-							image: new ol.style.Circle({
-								radius: 2,
-								fill: new ol.style.Fill({
-									color: 'rgba(140, 208, 95, 1.0)'
-								}),
-								stroke: null
-							})
-						}),
+      'AAP': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Citroen_2022.svg/1024px-Citroen_2022.svg.png',
+       rotation: 0,
+       scale: 1
+      }),
        text: new ol.style.Text({
         text: name,
 								offsetX : 7,
