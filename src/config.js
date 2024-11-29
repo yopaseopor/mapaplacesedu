@@ -1628,13 +1628,15 @@ var config = {
     var name = feature.get(name_key) || '';
     var styles = {
      'COD_LLOC': {
-      'AAP': new ol.style.Style({
+      'INF': new ol.style.Style({
        image: new ol.style.Circle({
-								radius: 2,
+								radius: 5,
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 208, 95, 1.0)'
 								}),
-								stroke: null
+								stroke: new ol.style.Stroke({
+								color: 'rgba(140, 208, 95, 1.0)',
+								width: 2
 							}),
        text: new ol.style.Text({
         text: name,
