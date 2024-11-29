@@ -1628,7 +1628,7 @@ var config = {
     var name = feature.get(name_key) || '';
     var styles = {
      'COD_LLOC': {
-      'AAP': new ol.style.Style({
+      'INF': new ol.style.Style({
        image: new ol.style.Circle({
 								radius: 2,
 								fill: new ol.style.Fill({
