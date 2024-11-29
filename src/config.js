@@ -1630,7 +1630,7 @@ var config = {
      'COD_LLOC': {
       'INF': new ol.style.Style({
        image: new ol.style.Circle({
-								radius: 2,
+								radius: 6,
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 208, 95, 1.0)'
 								}),
@@ -1650,7 +1650,7 @@ var config = {
       })
      },
      'COD_LLOC': {
-      'LE': new ol.style.Style({
+      'PRI': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
        rotation:9.4,
