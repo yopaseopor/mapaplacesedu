@@ -1618,7 +1618,7 @@ var config = {
  {
 
    group: 'Primària',
-   title: 'EES7',
+   title: 'EES6',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/EES4.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -1631,12 +1631,10 @@ var config = {
       'AAP': new ol.style.Style({
        image: new ol.style.Circle({
 								radius: 2,
-								stroke: new ol.style.Stroke({
-								color: 'rgba(246, 99, 79, 1.0)',
-								width: 1
-							}),
-							fill: new ol.style.Fill({
-								color: 'rgba(246, 99, 79, 0.3)'
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 208, 95, 1.0)'
+								}),
+								stroke: null
 							}),
        text: new ol.style.Text({
         text: name,
