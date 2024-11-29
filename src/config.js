@@ -1641,8 +1641,9 @@ var config = {
 							}),
        text: new ol.style.Text({
         text: name,
-								offsetX : 7,
-								offsetY : -12,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
                         })
@@ -1663,8 +1664,9 @@ var config = {
 							}),
        text: new ol.style.Text({
         text: name,
-								offsetX : 7,
-								offsetY : -12,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
                         })
@@ -1685,8 +1687,9 @@ var config = {
 							}),
        text: new ol.style.Text({
         text: name,
-								offsetX : 7,
-								offsetY : -12,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
                         })
