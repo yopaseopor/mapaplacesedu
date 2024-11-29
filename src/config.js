@@ -1673,16 +1673,23 @@ var config = {
      },
      'QUALIFICADOR': {
       'ORD': new ol.style.Style({
-       zIndex: 100,
-       stroke: new ol.style.Stroke({
-        color: 'rgba(246, 99, 79, 1.0)',
-        width: 1
-       }),
-       fill: new ol.style.Fill({
-        color: 'rgba(246, 99, 79, 0.3)'
-       }),
+          image: new ol.style.Circle({
+								radius: 7,
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 100, 95, 1.0)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 0, 255, 1.0)',
+								width: 1
+							})
+							}),
        text: new ol.style.Text({
-        text: name
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
        })
       })
      }
