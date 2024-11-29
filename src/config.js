@@ -1618,7 +1618,7 @@ var config = {
  {
 
    group: 'Primària',
-   title: 'EES4',
+   title: 'EES5',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/EES4.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
