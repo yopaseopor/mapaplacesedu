@@ -1633,11 +1633,9 @@ var config = {
 								radius: 2,
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 208, 95, 1.0)'
-								}),
 								stroke: new ol.style.Stroke({
-								color: 'rgba(140, 208, 95, 1.0)',
+								color: 'rgba(246, 99, 79, 1.0)',
 								width: 1
-								})
 							}),
        text: new ol.style.Text({
         text: name,
