@@ -1636,6 +1636,7 @@ var config = {
 								stroke: new ol.style.Stroke({
 								color: 'rgba(246, 99, 79, 1.0)',
 								width: 1
+							})
 							}),
        text: new ol.style.Text({
         text: name,
