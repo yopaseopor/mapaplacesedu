@@ -1628,12 +1628,15 @@ iconSrc: imgSrc + 'base/circle.svg',
     var name = feature.get(name_key) || '';
     var styles = {
      'COD_LLOC': {
-      'AAP': new ol.style.Style({
-       image: new ol.style.Icon({
-       src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Citroen_2022.svg/1024px-Citroen_2022.svg.png',
-       rotation: 0,
-       scale: 1
-      }),
+      'AAP':  new ol.style.Style({
+							image: new ol.style.Circle({
+								radius: 2,
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 208, 95, 1.0)'
+								}),
+								stroke: null
+							})
+						}),
        text: new ol.style.Text({
         text: name,
 								offsetX : 7,
