@@ -1630,9 +1630,7 @@ iconSrc: imgSrc + 'base/circle.svg',
      'COD_LLOC': {
       'AAP': new ol.style.Style({
 					image: new ol.style.Circle({
-						fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
+						fill: fill,
 						stroke: stroke,
 						radius: 5
 					}),
