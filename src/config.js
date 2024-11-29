@@ -1631,13 +1631,12 @@ iconSrc: imgSrc + 'base/circle.svg',
       'AAP':  new ol.style.Style({
 							image: new ol.style.Circle({
 								radius: 2,
-								stroke: new ol.style.Stroke({
-								color: 'rgba(140, 208, 95, 1.0)',
-								width: 1
-							}),
-							fill: new ol.style.Fill({
-								color: 'rgba(140, 208, 95, 0.3)'
-							}),
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 208, 95, 1.0)'
+								}),
+								stroke: null
+							})
+						}),
        text: new ol.style.Text({
         text: name,
 								offsetX : 7,
