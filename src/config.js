@@ -1634,7 +1634,10 @@ var config = {
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 208, 95, 1.0)'
 								}),
-								stroke: null
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 255, 255, 1.0)',
+								width: 3
+							})
 							}),
        text: new ol.style.Text({
         text: name,
