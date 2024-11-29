@@ -1651,11 +1651,16 @@ var config = {
      },
      'COD_LLOC': {
       'PRI': new ol.style.Style({
-       image: new ol.style.Icon({
-       src: 'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
-       rotation:9.4,
-              scale: 0.9
-      }),
+          image: new ol.style.Circle({
+								radius: 4,
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 100, 95, 1.0)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 0, 255, 1.0)',
+								width: 3
+							})
+							}),
        text: new ol.style.Text({
         text: name,
 								offsetX : 7,
