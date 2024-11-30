@@ -1626,6 +1626,9 @@ var config = {
     var key_regex = /^Denominació completa/
     var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
     var name = feature.get(name_key) || '';
+	var key_regex2 = /^TOT_DOT$/
+	var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
+	var name2 = feature.get(name_key2) || '';
     var styles = {
      'COD_LLOC': {
       'INF': new ol.style.Style({
@@ -1647,7 +1650,15 @@ var config = {
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
                         })
-       })
+       }),
+	   text: new ol.style.Text({
+								text: 'Accessibilitat '+ name2,
+								color: 'rgba(0,128,0,0.4)',
+								font: '10px Arial',
+								offsetX : 0,
+								offsetY : 15
+							}),
+	   
       })
      },
      'COD_LLOC': {
