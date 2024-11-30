@@ -1658,9 +1658,7 @@ var config = {
 								offsetY : 30,
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
-                        })
-							})
-	   
+                        })  
       })
      },
      'COD_LLOC': {
