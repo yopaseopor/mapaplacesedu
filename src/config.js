@@ -1653,10 +1653,12 @@ var config = {
        }),
 	   text: new ol.style.Text({
 								text: 'Accessibilitat '+ name2,
-								color: 'rgba(0,128,0,0.4)',
-								font: '10px Arial',
+								font: '10px Verdana',
 								offsetX : 0,
-								offsetY : 15
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
 							}),
 	   
       })
