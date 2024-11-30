@@ -1650,7 +1650,7 @@ var config = {
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
                         })
-       }),
+						}),
 	   text: new ol.style.Text({
 								text: 'Accessibilitat '+ name2,
 								font: '10px Verdana',
