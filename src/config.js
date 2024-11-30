@@ -1615,9 +1615,73 @@ var config = {
    } 
    
 },
+  
+{
+
+			group: 'TestPrimària',
+   title: 'EES5',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/EES4.geojson',
+	iconSrc: imgSrc + 'base/circle.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			style: function (feature) {
+				var key_regex = /^Denominació completa$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var key_regex2 = /^TOT_DOT$/
+				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
+				var name2 = feature.get(name_key2) || '';
+				
+				var fill = new ol.style.Fill({
+					color: 'rgba(0,255,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: '#00FF00',
+					width: 1.25
+				});
+
+				var style = new ol.style.Style({
+					image: new ol.style.Circle({
+						fill: fill,
+						stroke: stroke,
+						radius: 5
+					}),
+							text: new ol.style.Text({
+								text: name,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30
+							}),
+					fill: fill,
+					stroke: stroke
+				});
+				var style2 = new ol.style.Style({
+					image: new ol.style.Circle({
+						fill: fill,
+						stroke: stroke,
+						radius: 5
+					}),
+							text: new ol.style.Text({
+								text: 'Places '+ name2,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+								font: '10px Arial',
+								offsetX : 0,
+								offsetY : 15
+							}),
+					fill: fill,
+					stroke: stroke
+				});
+				return [style, style2];
+			}
+
+},
  {
 
-   group: 'Primària',
+   group: 'TestPrimària',
    title: 'EES6',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/EES4.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
