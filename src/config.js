@@ -2225,19 +2225,19 @@ var config = {
  {
 
    group: '100-400',
-   title: 'CS-100-4002',
+   title: 'CS-100-4003',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
-    var key_regex = /CS/
+    var key_regex = /Denominació completa/
     var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
     var name = feature.get(name_key) || '';
     var styles = {
      'CS': {
       '1': new ol.style.Style({
        image: new ol.style.Circle({
-								radius: 1,
+								radius: 4,
 								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(0, 0, 141, 0.8)'
@@ -2261,7 +2261,7 @@ var config = {
      'CS': {
       '2': new ol.style.Style({
           image: new ol.style.Circle({
-								radius: 1,
+								radius: 8,
 								displacement: [10, 20],
 								fill: new ol.style.Fill({
 									color: 'rgba(0, 0, 183, 0.8)'
@@ -2285,7 +2285,7 @@ var config = {
      'CS': {
       '3': new ol.style.Style({
           image: new ol.style.Circle({
-								radius: 1,
+								radius: 12,
 								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 100, 95, 0.8)'
@@ -2309,7 +2309,7 @@ var config = {
      'CS': {
       '4': new ol.style.Style({
           image: new ol.style.Circle({
-								radius: 1,
+								radius: 16,
 								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 100, 95, 0.8)'
@@ -2333,7 +2333,7 @@ var config = {
      'CS': {
       '5': new ol.style.Style({
           image: new ol.style.Circle({
-								radius: 1,
+								radius: 20,
 								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 100, 95, 0.8)'
