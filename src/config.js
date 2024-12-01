@@ -1854,7 +1854,7 @@ var config = {
      'CS': {
       '1': new ol.style.Style({
        image: new ol.style.Circle({
-								radius: 4,
+								radius: 1,
 								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(0, 0, 141, 0.8)'
@@ -1878,7 +1878,7 @@ var config = {
      'CS': {
       '2': new ol.style.Style({
           image: new ol.style.Circle({
-								radius: 8,
+								radius: 1,
 								displacement: [10, 20],
 								fill: new ol.style.Fill({
 									color: 'rgba(0, 0, 183, 0.8)'
@@ -1902,7 +1902,7 @@ var config = {
      'CS': {
       '3': new ol.style.Style({
           image: new ol.style.Circle({
-								radius: 12,
+								radius: 1,
 								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 100, 95, 0.8)'
@@ -1926,7 +1926,7 @@ var config = {
      'CS': {
       '4': new ol.style.Style({
           image: new ol.style.Circle({
-								radius: 16,
+								radius: 1,
 								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 100, 95, 0.8)'
@@ -1950,7 +1950,7 @@ var config = {
      'CS': {
       '5': new ol.style.Style({
           image: new ol.style.Circle({
-								radius: 20,
+								radius: 1,
 								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 100, 95, 0.8)'
