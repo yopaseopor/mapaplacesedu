@@ -2234,7 +2234,7 @@ var config = {
     var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
     var name = feature.get(name_key) || '';
     var styles = {
-     'CS': {
+     'TOT_DOT': {
       '1': new ol.style.Style({
        image: new ol.style.Circle({
 								radius: 4,
@@ -2258,7 +2258,7 @@ var config = {
        })
       })
      },
-     'CS': {
+     'TOT_DOT': {
       '2': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 8,
@@ -2282,7 +2282,7 @@ var config = {
        })
       })
      },
-     'CS': {
+     'TOT_DOT': {
       '3': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 12,
@@ -2306,7 +2306,7 @@ var config = {
        })
       })
      },
-     'CS': {
+     'TOT_DOT': {
       '4': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 16,
@@ -2330,7 +2330,7 @@ var config = {
        })
       })
      },
-     'CS': {
+     'TOT_DOT': {
       '5': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 20,
