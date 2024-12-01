@@ -1618,7 +1618,7 @@ var config = {
   
 {
 
-			group: '100-800',
+			group: '100-400',
    title: 'Tot',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
@@ -1627,7 +1627,7 @@ var config = {
 				var key_regex = /^Denominació completa$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
-				var key_regex2 = /^TOT_DOT$/
+				var key_regex2 = /^CS$/
 				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
 				var name2 = feature.get(name_key2) || '';
 				
@@ -1745,8 +1745,8 @@ var config = {
 },
  {
 
-   group: '100-400',
-   title: 'Tot2',
+   group: 'Test',
+   title: 'Tot2-100-400',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/tot.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -1841,8 +1841,8 @@ var config = {
 },
  {
 
-   group: '100-400',
-   title: 'CS',
+   group: 'Test',
+   title: 'CS-100-400',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
