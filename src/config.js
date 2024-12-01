@@ -1857,7 +1857,7 @@ var config = {
 								radius: 4,
 								displacement: [15, 30],
 								fill: new ol.style.Fill({
-									color: 'rgba(0, 0, 141, 0.4)'
+									color: 'rgba(0, 0, 141, 0.8)'
 								}),
 								stroke: new ol.style.Stroke({
 								color: 'rgba(0, 0, 141, 1.0)',
@@ -1880,7 +1880,7 @@ var config = {
           image: new ol.style.Circle({
 								radius: 8,
 								fill: new ol.style.Fill({
-									color: 'rgba(140, 100, 95, 0.4)'
+									color: 'rgba(140, 100, 95, 0.8)'
 								}),
 								stroke: new ol.style.Stroke({
 								color: 'rgba(255, 0, 255, 1.0)',
@@ -1903,7 +1903,7 @@ var config = {
           image: new ol.style.Circle({
 								radius: 12,
 								fill: new ol.style.Fill({
-									color: 'rgba(140, 100, 95, 0.4)'
+									color: 'rgba(140, 100, 95, 0.8)'
 								}),
 								stroke: new ol.style.Stroke({
 								color: 'rgba(255, 0, 255, 1.0)',
@@ -1926,7 +1926,7 @@ var config = {
           image: new ol.style.Circle({
 								radius: 16,
 								fill: new ol.style.Fill({
-									color: 'rgba(140, 100, 95, 0.4)'
+									color: 'rgba(140, 100, 95, 0.8)'
 								}),
 								stroke: new ol.style.Stroke({
 								color: 'rgba(255, 0, 255, 1.0)',
@@ -1949,7 +1949,7 @@ var config = {
           image: new ol.style.Circle({
 								radius: 20,
 								fill: new ol.style.Fill({
-									color: 'rgba(140, 100, 95, 0.4)'
+									color: 'rgba(140, 100, 95, 0.8)'
 								}),
 								stroke: new ol.style.Stroke({
 								color: 'rgba(255, 0, 255, 1.0)',
