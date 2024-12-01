@@ -1627,9 +1627,12 @@ var config = {
 				var key_regex = /^Denominació completa$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
-				var key_regex2 = /^CS$/
+				var key_regex2 = /^COD_LLOC$/
 				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
 				var name2 = feature.get(name_key2) || '';
+				var key_regex3 = /^CS$/
+				var name_key3 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name32"
+				var name3 = feature.get(name_key2) || '';
 				
 				var fill = new ol.style.Fill({
 					color: 'rgba(0,255,0,0.4)'
@@ -1652,11 +1655,12 @@ var config = {
                         }),
 								font: '10px Verdana',
 								offsetX : 0,
-								offsetY : 30
+								offsetY : 15
 							}),
 					fill: fill,
 					stroke: stroke
 				});
+
 				var style2 = new ol.style.Style({
 					image: new ol.style.Circle({
 						fill: fill,
@@ -1664,18 +1668,36 @@ var config = {
 						radius: 5
 					}),
 							text: new ol.style.Text({
-								text: 'Places '+ name2,
+								text: name2,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30
+							}),
+					fill: fill,
+					stroke: stroke
+				});
+				var style3 = new ol.style.Style({
+					image: new ol.style.Circle({
+						fill: fill,
+						stroke: stroke,
+						radius: 5
+					}),
+							text: new ol.style.Text({
+								text: 'Places '+ name3,
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
                         }),
 								font: '10px Arial',
 								offsetX : 0,
-								offsetY : 15
+								offsetY : 45
 							}),
 					fill: fill,
 					stroke: stroke
 				});
-				return [style, style2];
+				return [style, style2, style3];
 			}
 
 },
