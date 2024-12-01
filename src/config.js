@@ -1855,11 +1855,12 @@ var config = {
       '1': new ol.style.Style({
        image: new ol.style.Circle({
 								radius: 2,
+								displacement: [15, 30],
 								fill: new ol.style.Fill({
-									color: 'rgba(140, 208, 95, 1.0)'
+									color: 'rgba(0, 0, 141, 0.4)'
 								}),
 								stroke: new ol.style.Stroke({
-								color: 'rgba(255, 255, 255, 1.0)',
+								color: 'rgba(0, 0, 141, 1.0)',
 								width: 2
 							})
 							}),
@@ -1874,16 +1875,16 @@ var config = {
        })
       })
      },
-     'COD_LLOC': {
-      'PRI': new ol.style.Style({
+     'CS': {
+      '2': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 4,
 								fill: new ol.style.Fill({
-									color: 'rgba(140, 100, 95, 1.0)'
+									color: 'rgba(140, 100, 95, 0.4)'
 								}),
 								stroke: new ol.style.Stroke({
 								color: 'rgba(255, 0, 255, 1.0)',
-								width: 3
+								width: 2
 							})
 							}),
        text: new ol.style.Text({
@@ -1897,16 +1898,62 @@ var config = {
        })
       })
      },
-     'QUALIFICADOR': {
-      'ORD': new ol.style.Style({
+     'CS': {
+      '3': new ol.style.Style({
           image: new ol.style.Circle({
-								radius: 7,
+								radius: 6,
 								fill: new ol.style.Fill({
-									color: 'rgba(140, 100, 95, 1.0)'
+									color: 'rgba(140, 100, 95, 0.4)'
 								}),
 								stroke: new ol.style.Stroke({
 								color: 'rgba(255, 0, 255, 1.0)',
-								width: 1
+								width: 2
+							})
+							}),
+       text: new ol.style.Text({
+        text: name,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '4': new ol.style.Style({
+          image: new ol.style.Circle({
+								radius: 8,
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 100, 95, 0.4)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 0, 255, 1.0)',
+								width: 2
+							})
+							}),
+       text: new ol.style.Text({
+        text: name,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '5': new ol.style.Style({
+          image: new ol.style.Circle({
+								radius: 10,
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 100, 95, 0.4)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 0, 255, 1.0)',
+								width: 2
 							})
 							}),
        text: new ol.style.Text({
