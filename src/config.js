@@ -1745,7 +1745,7 @@ var config = {
 },
  {
 
-   group: 'TestPrimària',
+   group: '100-400',
    title: 'Tot2',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/tot.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
@@ -1765,6 +1765,102 @@ var config = {
 								stroke: new ol.style.Stroke({
 								color: 'rgba(255, 255, 255, 1.0)',
 								width: 3
+							})
+							}),
+       text: new ol.style.Text({
+        text: name,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'COD_LLOC': {
+      'PRI': new ol.style.Style({
+          image: new ol.style.Circle({
+								radius: 4,
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 100, 95, 1.0)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 0, 255, 1.0)',
+								width: 3
+							})
+							}),
+       text: new ol.style.Text({
+        text: name,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'QUALIFICADOR': {
+      'ORD': new ol.style.Style({
+          image: new ol.style.Circle({
+								radius: 7,
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 100, 95, 1.0)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 0, 255, 1.0)',
+								width: 1
+							})
+							}),
+       text: new ol.style.Text({
+        text: name,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     }
+    };
+    for (var key in styles) {
+     var value = feature.get(key);
+     if (value !== undefined) {
+      for (var regexp in styles[key]) {
+       if (new RegExp(regexp).test(value)) {
+        return styles[key][regexp];
+       }
+      }
+     }
+    }
+    return null;
+   } 
+   
+},
+ {
+
+   group: '100-400',
+   title: 'CS',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
+	iconSrc: imgSrc + 'base/circle.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+   style: function (feature) {
+    var key_regex = /^Denominació completa/
+    var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+    var name = feature.get(name_key) || '';
+    var styles = {
+     'CS': {
+      '1': new ol.style.Style({
+       image: new ol.style.Circle({
+								radius: 2,
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 208, 95, 1.0)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 255, 255, 1.0)',
+								width: 2
 							})
 							}),
        text: new ol.style.Text({
