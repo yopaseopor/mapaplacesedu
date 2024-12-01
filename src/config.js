@@ -1881,10 +1881,10 @@ var config = {
 								radius: 8,
 								displacement: [10, 20],
 								fill: new ol.style.Fill({
-									color: 'rgba(140, 100, 95, 0.8)'
+									color: 'rgba(0, 0, 183, 0.8)'
 								}),
 								stroke: new ol.style.Stroke({
-								color: 'rgba(255, 0, 255, 1.0)',
+								color: 'rgba(0, 0, 183, 1.0)',
 								width: 2
 							})
 							}),
