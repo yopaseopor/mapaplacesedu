@@ -1847,7 +1847,7 @@ var config = {
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
-    var key_regex = /^Denominació completa/
+    var key_regex = /^CS/
     var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
     var name = feature.get(name_key) || '';
     var styles = {
@@ -1879,6 +1879,7 @@ var config = {
       '2': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 8,
+								displacement: [10, 20],
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 100, 95, 0.8)'
 								}),
@@ -1902,6 +1903,7 @@ var config = {
       '3': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 12,
+								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 100, 95, 0.8)'
 								}),
@@ -1925,6 +1927,7 @@ var config = {
       '4': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 16,
+								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 100, 95, 0.8)'
 								}),
@@ -1948,6 +1951,7 @@ var config = {
       '5': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 20,
+								displacement: [15, 30],
 								fill: new ol.style.Fill({
 									color: 'rgba(140, 100, 95, 0.8)'
 								}),
