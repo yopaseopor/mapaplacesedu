@@ -2224,6 +2224,153 @@ var config = {
 },
  {
 
+   group: '100-400',
+   title: 'CS-100-4002',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
+	iconSrc: imgSrc + 'base/circle.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+   style: function (feature) {
+    var key_regex = /CS/
+    var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+    var name = feature.get(name_key) || '';
+    var styles = {
+     'CS': {
+      '1': new ol.style.Style({
+       image: new ol.style.Circle({
+								radius: 1,
+								displacement: [15, 30],
+								fill: new ol.style.Fill({
+									color: 'rgba(0, 0, 141, 0.8)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(0, 0, 141, 1.0)',
+								width: 2
+							})
+							}),
+       text: new ol.style.Text({
+        text: name,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '2': new ol.style.Style({
+          image: new ol.style.Circle({
+								radius: 1,
+								displacement: [10, 20],
+								fill: new ol.style.Fill({
+									color: 'rgba(0, 0, 183, 0.8)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(0, 0, 183, 1.0)',
+								width: 2
+							})
+							}),
+       text: new ol.style.Text({
+        text: name,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '3': new ol.style.Style({
+          image: new ol.style.Circle({
+								radius: 1,
+								displacement: [15, 30],
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 100, 95, 0.8)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 0, 255, 1.0)',
+								width: 2
+							})
+							}),
+       text: new ol.style.Text({
+        text: name,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '4': new ol.style.Style({
+          image: new ol.style.Circle({
+								radius: 1,
+								displacement: [15, 30],
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 100, 95, 0.8)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 0, 255, 1.0)',
+								width: 2
+							})
+							}),
+       text: new ol.style.Text({
+        text: name,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '5': new ol.style.Style({
+          image: new ol.style.Circle({
+								radius: 1,
+								displacement: [15, 30],
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 100, 95, 0.8)'
+								}),
+								stroke: new ol.style.Stroke({
+								color: 'rgba(255, 0, 255, 1.0)',
+								width: 2
+							})
+							}),
+       text: new ol.style.Text({
+        text: name,
+								font: '10px Verdana',
+								offsetX : 0,
+								offsetY : 30,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     }
+    };
+    for (var key in styles) {
+     var value = feature.get(key);
+     if (value !== undefined) {
+      for (var regexp in styles[key]) {
+       if (new RegExp(regexp).test(value)) {
+        return styles[key][regexp];
+       }
+      }
+     }
+    }
+    return null;
+   } 
+   
+},
+ {
+
    group: 'Primària',
    title: 'Test',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria.geojson',
