@@ -1631,7 +1631,7 @@ var config = {
 				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
 				var name2 = feature.get(name_key2) || '';
 				var key_regex3 = /^CS$/
-				var name_key3 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name32"
+				var name_key3 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name3"
 				var name3 = feature.get(name_key2) || '';
 				
 				var fill = new ol.style.Fill({
