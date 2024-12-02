@@ -2334,7 +2334,7 @@ var config = {
       })
      },
      'TOT_DOT': {
-      '6': new ol.style.Style({
+      '"6"': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 20,
 								displacement: [15, 30],
