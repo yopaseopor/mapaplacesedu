@@ -2375,6 +2375,82 @@ var config = {
  {
 
    group: '100-400',
+   title: 'CS-100-4006',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
+	iconSrc: imgSrc + 'base/circle.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)'
+   style: function (feature) {
+    var key_regex = /^Nom_Local/
+    var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+    var name = feature.get(name_key) || '';
+    var styles = {
+     'CS': {
+      '1': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: imgSrc + 'base/cs1.svg',
+       rotation: 0,
+       scale: 0.10
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '2': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: imgSrc + 'base/cs1.svg',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'traffic_sign': {
+      'ES:B1a': new ol.style.Style({
+       zIndex: 100,
+       stroke: new ol.style.Stroke({
+        color: 'rgba(246, 99, 79, 1.0)',
+        width: 1
+       }),
+       fill: new ol.style.Fill({
+        color: 'rgba(246, 99, 79, 0.3)'
+       }),
+       text: new ol.style.Text({
+        text: name
+       })
+      })
+     }
+    };
+    for (var key in styles) {
+     var value = feature.get(key);
+     if (value !== undefined) {
+      for (var regexp in styles[key]) {
+       if (new RegExp(regexp).test(value)) {
+        return styles[key][regexp];
+       }
+      }
+     }
+    }
+    return null;
+   } 
+   
+},
+ {
+
+   group: '100-400',
    title: 'CS-100-4004',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
