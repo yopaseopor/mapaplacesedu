@@ -1572,7 +1572,7 @@ var config = {
       'LE': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2255,7 +2255,7 @@ var config = {
       '2': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2272,7 +2272,7 @@ var config = {
       '3': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs3.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2289,7 +2289,7 @@ var config = {
       '4': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs4.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2306,7 +2306,7 @@ var config = {
       '5': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs5.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2323,7 +2323,7 @@ var config = {
       '6': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs6.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2340,7 +2340,7 @@ var config = {
       '7': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs7.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2357,7 +2357,7 @@ var config = {
       '8': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs8.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2374,7 +2374,7 @@ var config = {
       '9': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs9.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2391,7 +2391,7 @@ var config = {
       '10': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs10.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2408,7 +2408,7 @@ var config = {
       '11': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs11.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2425,7 +2425,7 @@ var config = {
       '12': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs12.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2442,7 +2442,7 @@ var config = {
       '13': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs13.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2459,7 +2459,7 @@ var config = {
       '14': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs14.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2476,7 +2476,7 @@ var config = {
       '15': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs15.svg',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2849,7 +2849,7 @@ var config = {
       'NO': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
@@ -2962,7 +2962,7 @@ var config = {
       'Sn': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
-       rotation:9.4,
+       rotation:0,
               scale: 0.9
       }),
        text: new ol.style.Text({
