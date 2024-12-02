@@ -2224,10 +2224,10 @@ var config = {
 },
  {
 
-   group: 'BCN (CC 4.0 Dades Ajuntament BCN)',
-   title: 'Test',
-   geojson: 'https://raw.githubusercontent.com/yopaseopor/osmpoismap/main/src/test_bcn.geojson',
-   iconSrc:'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
+   group: '100-400',
+   title: '400',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
     var key_regex = /^Nom_Local/
