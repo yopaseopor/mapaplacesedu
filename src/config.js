@@ -2258,17 +2258,6 @@ var config = {
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
                         })
-							})
-							}),
-       text: new ol.style.Text({
-        text: name2,
-								font: '10px Verdana',
-								offsetX : 0,
-								offsetY : 10,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        })
-						})
        })
       })
      },
