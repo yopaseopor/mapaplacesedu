@@ -2531,7 +2531,7 @@ var config = {
     var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
     var name = feature.get(name_key) || '';
     var styles = {
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '1': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
@@ -2548,7 +2548,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '2': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
@@ -2565,7 +2565,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '3': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs3.svg',
@@ -2582,7 +2582,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '4': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs4.svg',
@@ -2599,7 +2599,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '5': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs5.svg',
@@ -2616,7 +2616,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '6': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs6.svg',
@@ -2633,7 +2633,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '7': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs7.svg',
@@ -2650,7 +2650,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '8': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs8.svg',
@@ -2667,7 +2667,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '9': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs9.svg',
@@ -2684,7 +2684,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '10': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs10.svg',
@@ -2701,7 +2701,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '11': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs11.svg',
@@ -2718,7 +2718,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '12': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs12.svg',
@@ -2735,7 +2735,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '13': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs13.svg',
@@ -2752,7 +2752,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '14': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs14.svg',
@@ -2769,7 +2769,7 @@ var config = {
        })
       })
      },
-     'Comissió Serveis': {
+     'TOT_DOT': {
       '15': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs15.svg',
@@ -2786,8 +2786,8 @@ var config = {
        })
       })
      },
-     'traffic_sign': {
-      'ES:B1a': new ol.style.Style({
+     'TOT_DOT': {
+      '16': new ol.style.Style({
        zIndex: 100,
        stroke: new ol.style.Stroke({
         color: 'rgba(246, 99, 79, 1.0)',
