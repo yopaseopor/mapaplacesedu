@@ -2262,7 +2262,7 @@ var config = {
       })
      },
      'TOT_DOT': {
-      '2': new ol.style.Style({
+      '1': new ol.style.Style({
           image: new ol.style.Circle({
 								radius: 8,
 								displacement: [10, 20],
