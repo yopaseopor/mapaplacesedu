@@ -2254,7 +2254,7 @@ var config = {
      'Nom_Local': {
       'Sn': new ol.style.Style({
        image: new ol.style.Icon({
-       src: 'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
        rotation:9.4,
               scale: 0.9
       }),
