@@ -2225,7 +2225,7 @@ var config = {
  {
 
    group: '100-400',
-   title: '400',
+   title: '401',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
