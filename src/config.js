@@ -2230,10 +2230,10 @@ var config = {
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
-    var key_regex = /Denominació completa/
+    var key_regex = /TOT_DOT/
     var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
     var name = feature.get(name_key) || '';
-	    var key_regex2 = /TOT_DOT/
+	    var key_regex2 = /Denominació completa/
     var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
     var name2 = feature.get(name_key2) || '';
     var styles = {
