@@ -2254,7 +2254,160 @@ var config = {
      'CS': {
       '2': new ol.style.Style({
        image: new ol.style.Icon({
-       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '3': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs3.svg',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '4': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs4.svg',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '5': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs5.svg',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '6': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs6.svg',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '7': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs7.svg',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '8': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs8.svg',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '9': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs9.svg',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '10': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs10.svg',
+       rotation:9.4,
+              scale: 0.9
+      }),
+       text: new ol.style.Text({
+        text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+       })
+      })
+     },
+     'CS': {
+      '2': new ol.style.Style({
+       image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
        rotation:9.4,
               scale: 0.9
       }),
