@@ -2275,7 +2275,7 @@ var config = {
 							})
 							}),
        text: new ol.style.Text({
-        text: name,
+        text: name2,
 								font: '10px Verdana',
 								offsetX : 0,
 								offsetY : 30,
