@@ -2384,10 +2384,10 @@ var config = {
     var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
     var name = feature.get(name_key) || '';
     var styles = {
-     'CS': {
-      '1': new ol.style.Style({
+     'Nom_Local': {
+      'Citroen': new ol.style.Style({
        image: new ol.style.Icon({
-       src: imgSrc + 'base/cs1.svg',
+       src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Citroen_2022.svg/1024px-Citroen_2022.svg.png',
        rotation: 0,
        scale: 0.10
       }),
@@ -2401,10 +2401,10 @@ var config = {
        })
       })
      },
-     'CS': {
-      '2': new ol.style.Style({
+     'Nom_Local': {
+      'Sn': new ol.style.Style({
        image: new ol.style.Icon({
-       src: imgSrc + 'base/cs1.svg',
+       src: 'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
        rotation:9.4,
               scale: 0.9
       }),
