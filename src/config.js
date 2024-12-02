@@ -2230,14 +2230,14 @@ var config = {
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
-    var key_regex = /^Nom_Local/
+    var key_regex = /Denominació completa/
     var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
     var name = feature.get(name_key) || '';
     var styles = {
-     'Nom_Local': {
-      'Citroen': new ol.style.Style({
+     'CS': {
+      '1': new ol.style.Style({
        image: new ol.style.Icon({
-       src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Citroen_2022.svg/1024px-Citroen_2022.svg.png',
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
        rotation: 0,
        scale: 0.10
       }),
@@ -2251,8 +2251,8 @@ var config = {
        })
       })
      },
-     'Nom_Local': {
-      'Sn': new ol.style.Style({
+     'CS': {
+      '2': new ol.style.Style({
        image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
        rotation:9.4,
