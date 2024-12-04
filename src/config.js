@@ -3027,7 +3027,7 @@ var config = {
 			group: 'PRI',
 			title: 'Propietari Provisional',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
-   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs.svg',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/pp.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
 			style: function (feature) {
 				var maxspeed = feature.get('PP') || '';
@@ -3057,7 +3057,7 @@ var config = {
 
 					styles.push(new ol.style.Style({
 						image: new ol.style.Icon({
-       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs_buit.svg',
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/pp_buit.svg',
                      scale: scale
       }),
 						text: new ol.style.Text({
