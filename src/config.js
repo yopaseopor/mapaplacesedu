@@ -3014,6 +3014,7 @@ var config = {
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs_buit.svg',
                      scale: scale
       }),
+						text: new ol.style.Text({
 						text: maxspeed,
 								offsetX : 7,
 								offsetY : -12,
