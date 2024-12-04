@@ -2981,7 +2981,7 @@ var config = {
 			group: 'PRI',
 			title: 'Propietari provisional4',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
-   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs_buit.svg',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
 			style: function (feature) {
 				var maxspeed = feature.get('PP') || '';
