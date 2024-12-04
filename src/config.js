@@ -3013,7 +3013,7 @@ var config = {
 						image: new ol.style.RegularShape({
 						fill: fill,
 						stroke: stroke,
-						radius: 5
+						radius: 2
 					}),
 						text: new ol.style.Text({
 							text: maxspeed
