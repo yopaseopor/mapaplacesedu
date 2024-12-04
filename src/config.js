@@ -2991,7 +2991,7 @@ var config = {
 				var styles = [];
 
 				/* draw the segment line */ 
-				var scale = (parseFloat(maxspeed) / 50) + 0.5;
+				var scale = (parseFloat(maxspeed) / 150) + 0.5;
 				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
 				var fill = new ol.style.Fill({
 					color: 'rgb(' + color.join() + ')'
@@ -3014,9 +3014,12 @@ var config = {
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs_buit.svg',
                      scale: scale
       }),
-						text: new ol.style.Text({
-							text: maxspeed
-						})
+						text: maxspeed,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
 					}));
 				}
 
