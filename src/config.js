@@ -3185,7 +3185,214 @@ var config = {
 				return styles;
 			}
 },
-	
+		{
+			group: 'PRI',
+			title: 'Interí',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/in.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			style: function (feature) {
+				var maxspeed = feature.get('IN') || '';
+				if (maxspeed === ''){
+					return undefined;
+				}
+				var styles = [];
+
+				/* draw the segment line */ 
+				var scale = (parseFloat(maxspeed) / 50) + 0.5;
+				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
+				var fill = new ol.style.Fill({
+					color: 'rgb(' + color.join() + ')'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgb(' + color.join() + ')',
+					scale: scale
+				});
+				styles.push(new ol.style.Style({
+					stroke: stroke
+				}));
+
+				// doesn't show speed sign in roundabout and similars
+				if (!feature.get('junction')) {
+					/* show the speed sign */ 
+					var coords = feature.getGeometry().getCoordinates();
+
+					styles.push(new ol.style.Style({
+						image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/in_buit.svg',
+                     scale: scale
+      }),
+						text: new ol.style.Text({
+						text: maxspeed,
+						font: '14px Arial',
+								offsetX : 0,
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+						})
+					}));
+				}
+
+				return styles;
+			}
+},
+		{
+			group: 'PRI',
+			title: 'No Fix',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/nf.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			style: function (feature) {
+				var maxspeed = feature.get('NF') || '';
+				if (maxspeed === ''){
+					return undefined;
+				}
+				var styles = [];
+
+				/* draw the segment line */ 
+				var scale = (parseFloat(maxspeed) / 50) + 0.5;
+				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
+				var fill = new ol.style.Fill({
+					color: 'rgb(' + color.join() + ')'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgb(' + color.join() + ')',
+					scale: scale
+				});
+				styles.push(new ol.style.Style({
+					stroke: stroke
+				}));
+
+				// doesn't show speed sign in roundabout and similars
+				if (!feature.get('junction')) {
+					/* show the speed sign */ 
+					var coords = feature.getGeometry().getCoordinates();
+
+					styles.push(new ol.style.Style({
+						image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/nf_buit.svg',
+                     scale: scale
+      }),
+						text: new ol.style.Text({
+						text: maxspeed,
+						font: '14px Arial',
+								offsetX : 0,
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+						})
+					}));
+				}
+
+				return styles;
+			}
+},
+		{
+			group: 'PRI',
+			title: 'PS',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/ps.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			style: function (feature) {
+				var maxspeed = feature.get('PS') || '';
+				if (maxspeed === ''){
+					return undefined;
+				}
+				var styles = [];
+
+				/* draw the segment line */ 
+				var scale = (parseFloat(maxspeed) / 50) + 0.5;
+				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
+				var fill = new ol.style.Fill({
+					color: 'rgb(' + color.join() + ')'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgb(' + color.join() + ')',
+					scale: scale
+				});
+				styles.push(new ol.style.Style({
+					stroke: stroke
+				}));
+
+				// doesn't show speed sign in roundabout and similars
+				if (!feature.get('junction')) {
+					/* show the speed sign */ 
+					var coords = feature.getGeometry().getCoordinates();
+
+					styles.push(new ol.style.Style({
+						image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/ps_buit.svg',
+                     scale: scale
+      }),
+						text: new ol.style.Text({
+						text: maxspeed,
+						font: '14px Arial',
+								offsetX : 0,
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+						})
+					}));
+				}
+
+				return styles;
+			}
+},
+		{
+			group: 'PRI',
+			title: 'RF',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/rf.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			style: function (feature) {
+				var maxspeed = feature.get('RF') || '';
+				if (maxspeed === ''){
+					return undefined;
+				}
+				var styles = [];
+
+				/* draw the segment line */ 
+				var scale = (parseFloat(maxspeed) / 50) + 0.5;
+				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
+				var fill = new ol.style.Fill({
+					color: 'rgb(' + color.join() + ')'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgb(' + color.join() + ')',
+					scale: scale
+				});
+				styles.push(new ol.style.Style({
+					stroke: stroke
+				}));
+
+				// doesn't show speed sign in roundabout and similars
+				if (!feature.get('junction')) {
+					/* show the speed sign */ 
+					var coords = feature.getGeometry().getCoordinates();
+
+					styles.push(new ol.style.Style({
+						image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/rf_buit.svg',
+                     scale: scale
+      }),
+						text: new ol.style.Text({
+						text: maxspeed,
+						font: '14px Arial',
+								offsetX : 0,
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+						})
+					}));
+				}
+
+				return styles;
+			}
+},
 
  {
 
