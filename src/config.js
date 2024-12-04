@@ -2991,14 +2991,14 @@ var config = {
 				var styles = [];
 
 				/* draw the segment line */ 
-				var width = (parseFloat(maxspeed) / 0.3) + 0.5;
+				var scale = (parseFloat(maxspeed) / 0.3) + 0.5;
 				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
 				var fill = new ol.style.Fill({
 					color: 'rgb(' + color.join() + ')'
 				});
 				var stroke = new ol.style.Stroke({
 					color: 'rgb(' + color.join() + ')',
-					width: width
+					scale: scale
 				});
 				styles.push(new ol.style.Style({
 					stroke: stroke
@@ -3010,12 +3010,10 @@ var config = {
 					var coords = feature.getGeometry().getCoordinates();
 
 					styles.push(new ol.style.Style({
-						image: new ol.style.RegularShape({
-						fill: fill,
-						stroke: stroke,
-						angle: 60,
-						radius: 2
-					}),
+						image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
+                     scale: scale
+      }),
 						text: new ol.style.Text({
 							text: maxspeed
 						})
@@ -3024,7 +3022,8 @@ var config = {
 
 				return styles;
 			}
-		},
+},
+	
 
  {
 
