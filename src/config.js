@@ -2981,7 +2981,7 @@ var config = {
 			group: 'PRI',
 			title: 'Total dotació',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
-   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/tot_dots.svg',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/tot_dot.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
 			style: function (feature) {
 				var maxspeed = feature.get('TOT_DOT') || '';
