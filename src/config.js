@@ -2903,7 +2903,7 @@ var config = {
 							text: new ol.style.Text({
 								text: name,
 								color: 'rgba(0,128,0,0.4)',
-								font: '10px Verdana',
+								font: '12px Verdana',
 								offsetX : 0,
 								offsetY : 30
 							}),
@@ -2919,7 +2919,7 @@ var config = {
 							text: new ol.style.Text({
 								text: 'PP '+ name2,
 								color: 'rgba(0,128,0,0.4)',
-								font: '10px Arial',
+								font: '12px Arial',
 								offsetX : 0,
 								offsetY : 15
 							}),
