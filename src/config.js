@@ -2876,7 +2876,7 @@ var config = {
   
 {
 			group: 'PRI',
-			title: 'Propietari provisional',
+			title: 'Propietari provisional1',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -2932,9 +2932,9 @@ var config = {
 },
 		{
 			group: 'PRI',
-			title: 'Propietari provisional3',
+			title: 'Propietari provisional2',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
-   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/pp.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
 			style: function (feature) {
 				var maxspeed = feature.get('PP') || '';
@@ -2979,12 +2979,58 @@ var config = {
 },
 		{
 			group: 'PRI',
-			title: 'Propietari provisional4',
+			title: 'Comissió Serveis',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
 			style: function (feature) {
 				var maxspeed = feature.get('Comissió Serveis') || '';
+				if (maxspeed === ''){
+					return undefined;
+				}
+				var styles = [];
+
+				/* draw the segment line */ 
+				var scale = (parseFloat(maxspeed) / 50) + 0.5;
+				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
+				var fill = new ol.style.Fill({
+					color: 'rgb(' + color.join() + ')'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgb(' + color.join() + ')',
+					scale: scale
+				});
+				styles.push(new ol.style.Style({
+					stroke: stroke
+				}));
+
+				// doesn't show speed sign in roundabout and similars
+				if (!feature.get('junction')) {
+					/* show the speed sign */ 
+					var coords = feature.getGeometry().getCoordinates();
+
+					styles.push(new ol.style.Style({
+						image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs_buit.svg',
+                     scale: scale
+      }),
+						text: new ol.style.Text({
+							text: maxspeed
+						})
+					}));
+				}
+
+				return styles;
+			}
+},
+		{
+			group: 'PRI',
+			title: 'Propietari Provisional',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			style: function (feature) {
+				var maxspeed = feature.get('PP') || '';
 				if (maxspeed === ''){
 					return undefined;
 				}
