@@ -2932,7 +2932,7 @@ var config = {
 },
 		{
 			group: 'PRI',
-			title: 'Propietari provisional2',
+			title: 'Propietari provisional3',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -2944,7 +2944,7 @@ var config = {
 				var styles = [];
 
 				/* draw the segment line */ 
-				var width = (parseFloat(maxspeed) / 30) + 0.5;
+				var width = (parseFloat(maxspeed) / 3) + 0.5;
 				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.min(maxspeed, 120) / 120);
 				var fill = new ol.style.Fill({
 					color: 'rgb(' + color.join() + ')'
@@ -2963,7 +2963,6 @@ var config = {
 					var coords = feature.getGeometry().getCoordinates();
 
 					styles.push(new ol.style.Style({
-						geometry: new ol.geom.Point(new ol.geom.LineString(coords).getCoordinateAt(0.5)), // show the image in the middle of the segment
 						image: new ol.style.Circle({
 						fill: fill,
 						stroke: stroke,
