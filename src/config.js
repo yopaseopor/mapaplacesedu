@@ -2976,6 +2976,53 @@ var config = {
 
 				return styles;
 			}
+},
+		{
+			group: 'PRI',
+			title: 'Propietari provisional4',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			style: function (feature) {
+				var maxspeed = feature.get('PP') || '';
+				if (maxspeed === ''){
+					return undefined;
+				}
+				var styles = [];
+
+				/* draw the segment line */ 
+				var width = (parseFloat(maxspeed) / 0.3) + 0.5;
+				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
+				var fill = new ol.style.Fill({
+					color: 'rgb(' + color.join() + ')'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgb(' + color.join() + ')',
+					width: width
+				});
+				styles.push(new ol.style.Style({
+					stroke: stroke
+				}));
+
+				// doesn't show speed sign in roundabout and similars
+				if (!feature.get('junction')) {
+					/* show the speed sign */ 
+					var coords = feature.getGeometry().getCoordinates();
+
+					styles.push(new ol.style.Style({
+						image: new ol.style.RegularShape({
+						fill: fill,
+						stroke: stroke,
+						radius: 5
+					}),
+						text: new ol.style.Text({
+							text: maxspeed
+						})
+					}));
+				}
+
+				return styles;
+			}
 		},
 
  {
