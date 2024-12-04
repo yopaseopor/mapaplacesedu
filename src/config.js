@@ -3016,8 +3016,9 @@ var config = {
       }),
 						text: new ol.style.Text({
 						text: maxspeed,
-								offsetX : 7,
-								offsetY : -12,
+						font: '14px Arial',
+								offsetX : 0,
+								offsetY : 0,
 								fill: new ol.style.Fill({
                             color: 'rgba(0,0,0,1)'
                         })
