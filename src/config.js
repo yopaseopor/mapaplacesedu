@@ -2979,6 +2979,58 @@ var config = {
 },
 		{
 			group: 'PRI',
+			title: 'Total dotació',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/tot_dots.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			style: function (feature) {
+				var maxspeed = feature.get('TOT_DOT') || '';
+				if (maxspeed === ''){
+					return undefined;
+				}
+				var styles = [];
+
+				/* draw the segment line */ 
+				var scale = (parseFloat(maxspeed) / 50) + 0.5;
+				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
+				var fill = new ol.style.Fill({
+					color: 'rgb(' + color.join() + ')'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgb(' + color.join() + ')',
+					scale: scale
+				});
+				styles.push(new ol.style.Style({
+					stroke: stroke
+				}));
+
+				// doesn't show speed sign in roundabout and similars
+				if (!feature.get('junction')) {
+					/* show the speed sign */ 
+					var coords = feature.getGeometry().getCoordinates();
+
+					styles.push(new ol.style.Style({
+						image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/tot_dot_buit.svg',
+                     scale: scale
+      }),
+						text: new ol.style.Text({
+						text: maxspeed,
+						font: '14px Arial',
+								offsetX : 0,
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+						})
+					}));
+				}
+
+				return styles;
+			}
+},
+		{
+			group: 'PRI',
 			title: 'Comissió Serveis',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs.svg',
@@ -3012,6 +3064,58 @@ var config = {
 					styles.push(new ol.style.Style({
 						image: new ol.style.Icon({
        src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs_buit.svg',
+                     scale: scale
+      }),
+						text: new ol.style.Text({
+						text: maxspeed,
+						font: '14px Arial',
+								offsetX : 0,
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
+						})
+					}));
+				}
+
+				return styles;
+			}
+},
+		{
+			group: 'PRI',
+			title: 'Destinació Definitiva',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/dd.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			style: function (feature) {
+				var maxspeed = feature.get('DD') || '';
+				if (maxspeed === ''){
+					return undefined;
+				}
+				var styles = [];
+
+				/* draw the segment line */ 
+				var scale = (parseFloat(maxspeed) / 50) + 0.5;
+				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
+				var fill = new ol.style.Fill({
+					color: 'rgb(' + color.join() + ')'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgb(' + color.join() + ')',
+					scale: scale
+				});
+				styles.push(new ol.style.Style({
+					stroke: stroke
+				}));
+
+				// doesn't show speed sign in roundabout and similars
+				if (!feature.get('junction')) {
+					/* show the speed sign */ 
+					var coords = feature.getGeometry().getCoordinates();
+
+					styles.push(new ol.style.Style({
+						image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/dd_buit.svg',
                      scale: scale
       }),
 						text: new ol.style.Text({
@@ -3067,7 +3171,13 @@ var config = {
                      scale: scale
       }),
 						text: new ol.style.Text({
-							text: maxspeed
+						text: maxspeed,
+						font: '14px Arial',
+								offsetX : 0,
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        })
 						})
 					}));
 				}
