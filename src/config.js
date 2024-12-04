@@ -2984,14 +2984,14 @@ var config = {
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
 			style: function (feature) {
-				var maxspeed = feature.get('PP') || '';
+				var maxspeed = feature.get('CS') || '';
 				if (maxspeed === ''){
 					return undefined;
 				}
 				var styles = [];
 
 				/* draw the segment line */ 
-				var scale = (parseFloat(maxspeed) / 70) + 0.5;
+				var scale = (parseFloat(maxspeed) / 95) + 0.5;
 				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.max(maxspeed, 2) / 20);
 				var fill = new ol.style.Fill({
 					color: 'rgb(' + color.join() + ')'
