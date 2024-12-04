@@ -2946,7 +2946,9 @@ var config = {
 				/* draw the segment line */ 
 				var width = (parseFloat(maxspeed) / 30) + 0.5;
 				var color = linearColorInterpolation([0, 255, 0], [255, 0, 0], Math.min(maxspeed, 120) / 120);
-
+				var fill = new ol.style.Fill({
+					color: 'rgb(' + color.join() + ')'
+				});
 				var stroke = new ol.style.Stroke({
 					color: 'rgb(' + color.join() + ')',
 					width: width
@@ -2962,10 +2964,11 @@ var config = {
 
 					styles.push(new ol.style.Style({
 						geometry: new ol.geom.Point(new ol.geom.LineString(coords).getCoordinateAt(0.5)), // show the image in the middle of the segment
-						image: new ol.style.Icon({
-							src: imgSrc + 'base/cs2.svg',
-							scale:0.04
-						}),
+						image: new ol.style.Circle({
+						fill: fill,
+						stroke: stroke,
+						radius: 5
+					}),
 						text: new ol.style.Text({
 							text: maxspeed
 						})
