@@ -2984,7 +2984,7 @@ var config = {
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
 			style: function (feature) {
-				var maxspeed = feature.get('CS') || '';
+				var maxspeed = feature.get('PP') || '';
 				if (maxspeed === ''){
 					return undefined;
 				}
