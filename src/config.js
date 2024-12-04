@@ -3013,7 +3013,7 @@ var config = {
 						image: new ol.style.RegularShape({
 						fill: fill,
 						stroke: stroke,
-						angle: 2,
+						angle: 60,
 						radius: 2
 					}),
 						text: new ol.style.Text({
