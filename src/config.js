@@ -3088,7 +3088,7 @@ var config = {
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/dd.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
 			style: function (feature) {
-				var maxspeed = feature.get('DD') || '';
+				var maxspeed = feature.get('DD') || '6';
 				if (maxspeed === ''){
 					return undefined;
 				}
