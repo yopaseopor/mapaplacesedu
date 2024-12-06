@@ -2876,6 +2876,64 @@ var config = {
   
 {
 			group: 'PRI',
+			title: 'Propietari provisional0',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+   style: function (feature) {
+				var key_regex = /^Denominació completa$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var key_regex2 = /^PP$/
+				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
+				var name2 = feature.get(name_key2) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(0,255,0,0.4)'
+				});
+
+				var stroke = new ol.style.Stroke({
+					color: '#00FF00',
+					width: 1.25
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
+                     scale: 0.1
+      }),
+							text: new ol.style.Text({
+								text: name,
+								color: 'rgba(0,128,0,0.4)',
+								font: '12px Verdana',
+								offsetX : 0,
+								offsetY : 30
+							}),
+					fill: fill,
+					stroke: stroke
+				});
+				var style2 = new ol.style.Style({
+					image: new ol.style.RegularShape({
+						fill: fill,
+						stroke: stroke,
+						points: 4,
+						radius: 10
+					}),
+							text: new ol.style.Text({
+								text: 'PP '+ name2,
+								color: 'rgba(0,128,0,0.4)',
+								font: '12px Arial',
+								offsetX : 0,
+								offsetY : 15
+							}),
+					fill: fill,
+					stroke: stroke
+				});
+				return [style, style2];
+			}
+
+},
+  
+{
+			group: 'PRI',
 			title: 'Propietari provisional1',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
