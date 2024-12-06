@@ -2972,11 +2972,13 @@ var config = {
 					}),
 							text: new ol.style.Text({
 								text: name2,
-								color: 'rgba(255,255,255,0.4)',
 								font: '12px Arial',
 								offsetX : 0,
-								offsetY : 0
-							}),
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(255,255,255,1)'
+                        }),
+						}),
 					fill: fill,
 					stroke: stroke
 				});
