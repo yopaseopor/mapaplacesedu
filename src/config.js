@@ -2993,7 +2993,7 @@ var config = {
 			group: 'PRI',
 			title: 'Comissió de serveis',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
-   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/dd.svg',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
 				var key_regex = /^Denominació completa$/
