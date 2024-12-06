@@ -3500,7 +3500,7 @@ var config = {
 					color: 'rgba(' + color.join() + ')'
 				});
 				var stroke = new ol.style.Stroke({
-					color: 'rgba(' + color.join() + ')',
+					color: color,
 					width: width
 				});
 				styles.push(new ol.style.Style({
