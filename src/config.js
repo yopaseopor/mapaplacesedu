@@ -3497,7 +3497,7 @@ var config = {
 				var width = (parseFloat(maxspeed) / 0.3) + 0.5;
 				var color = 'rgba( '+ maxspeed * 30 +', '+ maxspeed * 50 +', '+ maxspeed * 80 +',1)';
 				var fill = new ol.style.Fill({
-					color: 'rgba(' + color.join() + ')'
+					color: color
 				});
 				var stroke = new ol.style.Stroke({
 					color: color,
