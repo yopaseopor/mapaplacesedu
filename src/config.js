@@ -2946,7 +2946,7 @@ var config = {
 				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
 				var name2 = feature.get(name_key2) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba( '+ name2 * 5 +', '+ name2 * 10 +', '+ name2 * 20 +',1)'
+					color: 'rgba( '+ name2 * 10 +', '+ name2 * 20 +', '+ name2 * 30 +',1)'
 				});
 
 				var stroke = new ol.style.Stroke({
