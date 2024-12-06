@@ -3482,7 +3482,7 @@ var config = {
 },
 		{
 			group: 'PRI',
-			title: 'Propietari provisional3',
+			title: 'Propietari provisional4',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/pp.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
