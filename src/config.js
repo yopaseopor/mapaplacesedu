@@ -2946,23 +2946,19 @@ var config = {
 				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
 				var name2 = feature.get(name_key2) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba( '+ name2 * 40 +', '+ name2 * 40 +', '+ name2 * 40 +',1)'
+					color: 'rgba( '+ name2 * 30 +', '+ name2 * 50 +', '+ name2 * 80 +',1)'
 				});
 
 				var stroke = new ol.style.Stroke({
-					color: '#00FF00',
-					width: 1.25
+					color: 'rgba( '+ name2 * 30 +', '+ name2 * 50 +', '+ name2 * 80 +',1)',
+					width: 3
 				});
 				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-       src: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
-                     scale: 0.1
-      }),
-							text: new ol.style.Text({
+					text: new ol.style.Text({
 								text: name,
 								font: '12px Verdana',
 								offsetX : 0,
-								offsetY : 30
+								offsetY : 15
 							}),
 					fill: fill,
 					stroke: stroke
@@ -2975,11 +2971,11 @@ var config = {
 						radius: name2 * 5
 					}),
 							text: new ol.style.Text({
-								text: 'PP '+ name2,
+								text: name2,
 								color: 'rgba(0,128,0,0.4)',
 								font: '12px Arial',
 								offsetX : 0,
-								offsetY : 15
+								offsetY : 0
 							}),
 					fill: fill,
 					stroke: stroke
