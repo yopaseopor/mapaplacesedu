@@ -2973,7 +2973,7 @@ var config = {
 						fill: fill,
 						stroke: stroke,
 						points: 5,
-						radius: name2
+						radius: name2 * 10
 					}),
 							text: new ol.style.Text({
 								text: 'PP '+ name2,
