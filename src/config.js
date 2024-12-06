@@ -2936,13 +2936,13 @@ var config = {
 			group: 'PRI',
 			title: 'Total Dotació',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
-   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/in.svg',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/tot_dot.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
 				var key_regex = /^Denominació completa$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
-				var key_regex2 = /^IN$/
+				var key_regex2 = /^TOT_DOT$/
 				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
 				var name2 = feature.get(name_key2) || '';
 				var fill = new ol.style.Fill({
@@ -2968,7 +2968,7 @@ var config = {
 						fill: fill,
 						stroke: stroke,
 						points: 5,
-						radius: 10,
+						radius: name2 * 5
 						radius2: 4,
 						angle: 0
 					}),
