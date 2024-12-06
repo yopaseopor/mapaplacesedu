@@ -2934,7 +2934,7 @@ var config = {
   
 {
 			group: 'PRI',
-			title: 'Propietari provisional-2',
+			title: 'Propietari provisional-3',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -2946,7 +2946,7 @@ var config = {
 				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
 				var name2 = feature.get(name_key2) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba(0,255,0,0.4)'
+					color: 'rgba(0,['name2 * 10'],0,0.4)'
 				});
 
 				var stroke = new ol.style.Stroke({
@@ -2960,7 +2960,6 @@ var config = {
       }),
 							text: new ol.style.Text({
 								text: name,
-								color: 'rgba(0,128,0,0.4)',
 								font: '12px Verdana',
 								offsetX : 0,
 								offsetY : 30
