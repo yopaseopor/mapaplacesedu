@@ -2934,15 +2934,72 @@ var config = {
   
 {
 			group: 'PRI',
-			title: 'Propietari provisional-3',
+			title: 'Total Dotació',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
-   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/in.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
    style: function (feature) {
 				var key_regex = /^Denominació completa$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
-				var key_regex2 = /^PP$/
+				var key_regex2 = /^IN$/
+				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
+				var name2 = feature.get(name_key2) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba( '+ name2 * 30 +', '+ name2 * 50 +', '+ name2 * 80 +',1)'
+				});
+
+				var stroke = new ol.style.Stroke({
+					color: 'rgba( '+ name2 * 30 +', '+ name2 * 50 +', '+ name2 * 80 +',1)',
+					width: 3
+				});
+				var style = new ol.style.Style({
+					text: new ol.style.Text({
+								text: name,
+								font: '12px Verdana',
+								offsetX : 0,
+								offsetY : 15
+							}),
+					fill: fill,
+					stroke: stroke
+				});
+				var style2 = new ol.style.Style({
+					image: new ol.style.RegularShape({
+						fill: fill,
+						stroke: stroke,
+						points: 5,
+						radius: 10,
+						radius2: 4,
+						angle: 0
+					}),
+							text: new ol.style.Text({
+								text: name2,
+								font: '12px Arial',
+								offsetX : 0,
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(200,200,200,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return [style, style2];
+			}
+
+},
+  
+{
+			group: 'PRI',
+			title: 'Interí',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/in.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+   style: function (feature) {
+				var key_regex = /^Denominació completa$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var key_regex2 = /^IN$/
 				var name_key2 = feature.getKeys().filter(function(t){return t.match(key_regex2)}).pop() || "name2"
 				var name2 = feature.get(name_key2) || '';
 				var fill = new ol.style.Fill({
