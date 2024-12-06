@@ -2968,7 +2968,7 @@ var config = {
 						fill: fill,
 						stroke: stroke,
 						points: 5,
-						radius: name2 * 5,
+						radius: name2 * 10,
 						radius2: name2 * 4,
 						angle: 0
 					}),
