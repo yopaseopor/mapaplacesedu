@@ -2969,7 +2969,7 @@ var config = {
 						stroke: stroke,
 						points: 5,
 						radius: name2 * 5,
-						radius2: 4,
+						radius2: name2 * 4,
 						angle: 0
 					}),
 							text: new ol.style.Text({
