@@ -3482,6 +3482,53 @@ var config = {
 },
 		{
 			group: 'PRI',
+			title: 'Propietari provisional3',
+   geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
+   iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/pp.svg',
+   iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			style: function (feature) {
+				var maxspeed = feature.get('PP') || '';
+				if (maxspeed === ''){
+					return undefined;
+				}
+				var styles = [];
+
+				/* draw the segment line */ 
+				var width = (parseFloat(maxspeed) / 0.3) + 0.5;
+				var color = 'rgba( '+ maxspeed * 30 +', '+ maxspeed * 50 +', '+ maxspeed * 80 +',1)';
+				var fill = new ol.style.Fill({
+					color: 'rgba(' + color.join() + ')'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(' + color.join() + ')',
+					width: width
+				});
+				styles.push(new ol.style.Style({
+					stroke: stroke
+				}));
+
+				// doesn't show speed sign in roundabout and similars
+				if (!feature.get('junction')) {
+					/* show the speed sign */ 
+					var coords = feature.getGeometry().getCoordinates();
+
+					styles.push(new ol.style.Style({
+						image: new ol.style.Circle({
+						fill: fill,
+						stroke: stroke,
+						radius: 5
+					}),
+						text: new ol.style.Text({
+							text: maxspeed
+						})
+					}));
+				}
+
+				return styles;
+			}
+},
+		{
+			group: 'PRI',
 			title: 'Total dotació',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/tot_dot.svg',
