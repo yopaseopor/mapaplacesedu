@@ -2976,7 +2976,7 @@ var config = {
 								offsetX : 0,
 								offsetY : 0,
 								fill: new ol.style.Fill({
-                            color: 'rgba(255,255,255,1)'
+                            color: 'rgba(127,127,127,1)'
                         }),
 						}),
 					fill: fill,
