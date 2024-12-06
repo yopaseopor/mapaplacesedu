@@ -167,1148 +167,6 @@ var config = {
 	overlays: [
 
 		{
-			group: 'Survey:date',
-			title: 'No Survey:date',
-			query: '(nwr[!"survey:date"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(0,0,0,0.4)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(0,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{  
-			group: 'Test',
-			title: 'Falta Wheelchair',
-			query: '(node[!wheelchair][shop]({{bbox}});node[!wheelchair][amenity]({{bbox}});node[!wheelchair][office]({{bbox}}););out meta;',
-			iconSrc: imgSrc + 'accessibilitat/wheelchair_unknown.svg',
-			iconStyle: 'background-color:#714601',
-			scale: 0.25,
-			style: function () {
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-						src: imgSrc + 'accessibilitat/wheelchair_unknown.svg'
-					})
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Test',
-			title: 'Falta Check_date (nodes)',
-			query: '(node[!check_date][shop]({{bbox}});node[!check_date][amenity]({{bbox}});node[!check_date][office]({{bbox}}););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:#000000',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: '#000000',
-					width: 1.25
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Test',
-			title: 'Check_date > 2020',
-			query: '(nwr[~"^check_date$"~"201[0-9]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,0,0,0.4)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Test',
-			title: 'Check_date < 2020',
-			query: '(nwr[~"^check_date$"~"202[0-9]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(0,255,0,0.4)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,255,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(0,255,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Test',
-			title: 'Falta Check_date (nodes)',
-			query: '(node[!check_date][shop]({{bbox}});node[!check_date][amenity]({{bbox}});node[!check_date][office]({{bbox}}););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:#000000',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: '#000000',
-					width: 1.25
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Test',
-			title: '2016',
-			query: '(nwr[~"^survey:date$"~"201[6]."]({{bbox}});node(w);nwr[~"^survey:date:2016$"~"201[6]."]({{bbox}});node(w));out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(187,92,120,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(187,92,120,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(187,92,120,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-
-  },
-		{
-			group: 'Survey:date',
-			title: 'Survey:date > 2020',
-			query: '(nwr[~"^survey:date$"~"201[0-9]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,0,0,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '> 2015',
-			query: '(nwr[~"^survey:date$"~"201[0-5]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(117,63,79,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(117,63,79,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(117,63,79,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '2016',
-			query: '(nwr[~"^survey:date$"~"201[6]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(187,92,120,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(187,92,120,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(187,92,120,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '2017',
-			query: '(nwr[~"^survey:date$"~"201[7]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,152,124,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,152,124,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,152,124,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '2018',
-			query: '(nwr[~"^survey:date$"~"201[8]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,209,124,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,209,124,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,209,124,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '2019',
-			query: '(nwr[~"^survey:date$"~"201[9]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,251,124,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,251,124,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,251,124,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '2020',
-			query: '(nwr[~"^survey:date$"~"202[0]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(190,255,124,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(190,255,124,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(190,255,124,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '2021',
-			query: '(nwr[~"^survey:date$"~"202[1]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(124,255,166,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(124,255,166,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(124,255,166,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '2022',
-			query: '(nwr[~"^survey:date$"~"202[2]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(124,255,245,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(124,255,245,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(124,255,245,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '2023',
-			query: '(nwr[~"^survey:date$"~"202[3]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(0,0,255,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,255,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(0,0,255,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '2024',
-			query: '(nwr[~"^survey:date$"~"202[4]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba( 187, 46, 204,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba( 187, 46, 204,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba( 187, 46, 204,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Survey:date',
-			title: '2020 < Survey:date',
-			query: '(nwr[~"^survey:date$"~"202[0-9]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(0,255,0,1)',
-			style: function (feature) {
-				var key_regex = /^survey:date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,255,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(0,255,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-},
-		{
-			group: 'Check_date',
-			title: 'No check_date',
-			query: '(nwr[!"check_date"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(0,0,0,0.4)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(0,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: 'check_date > 2020',
-			query: '(nwr[~"^check_date$"~"201[0-9]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,0,0,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '> 2015',
-			query: '(nwr[~"^check_date$"~"201[0-5]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(117,63,79,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(117,63,79,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(117,63,79,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '2016',
-			query: '(nwr[~"^check_date$"~"201[6]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(187,92,120,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(187,92,120,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(187,92,120,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '2017',
-			query: '(nwr[~"^check_date$"~"201[7]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,152,124,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,152,124,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,152,124,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '2018',
-			query: '(nwr[~"^check_date$"~"201[8]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,209,124,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,209,124,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,209,124,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '2019',
-			query: '(nwr[~"^check_date$"~"201[9]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,251,124,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,251,124,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,251,124,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '2020',
-			query: '(nwr[~"^check_date$"~"202[0]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(190,255,124,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(190,255,124,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(190,255,124,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '2021',
-			query: '(nwr[~"^check_date$"~"202[1]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(124,255,166,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(124,255,166,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(124,255,166,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '2022',
-			query: '(nwr[~"^check_date$"~"202[2]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(124,255,245,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(124,255,245,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(124,255,245,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '2023',
-			query: '(nwr[~"^check_date$"~"202[3]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(0,0,255,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,255,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(0,0,255,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '2024',
-			query: '(nwr[~"^check_date$"~"202[4]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba( 187, 46, 204,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba( 187, 46, 204,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba( 187, 46, 204,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-  },
-		{
-			group: 'Check_date',
-			title: '2020 < check_date',
-			query: '(nwr[~"^check_date$"~"202[0-9]."]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(0,255,0,1)',
-			style: function (feature) {
-				var key_regex = /^check_date$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,255,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(0,255,0,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Circle({
-						fill: fill,
-						stroke: stroke,
-						radius: 5
-					}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 0,
-								offsetY : 20,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
- },
-		{
 			group: 'Test',
 			title: 'Check_date_extended2',
 			query: '(nwr[~"^check_date:opening_hours$"~"."]({{bbox}});node(w););out meta;',
@@ -1541,8 +399,8 @@ var config = {
 },
  {
 
-   group: 'Primària',
-   title: 'Test4',
+   group: 'Test',
+   title: 'Primària Test4',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -1618,8 +476,8 @@ var config = {
   
 {
 
-			group: '100-400',
-   title: 'Test0',
+			group: 'Test',
+   title: '100-400Test0',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -1704,8 +562,8 @@ var config = {
   
 {
 
-			group: '100-400',
-   title: 'Test1',
+			group: 'Test',
+   title: '100-400Test1',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -1768,8 +626,8 @@ var config = {
   
 {
 
-			group: '100-400',
-   title: 'Test2',
+			group: 'Test',
+   title: '100-400 Test2',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -1854,8 +712,8 @@ var config = {
   
 {
 
-			group: '100-400',
-   title: 'Test5',
+			group: 'Test',
+   title: '100-400 Test5',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -1918,8 +776,8 @@ var config = {
   
 {
 
-			group: 'TestPrimària',
-   title: 'Tot',
+			group: 'Test',
+   title: 'Primària Tot',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/tot.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -2522,7 +1380,7 @@ var config = {
  {
 
    group: 'Test',
-   title: 'CS4',
+   title: 'PRI CS4',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -2818,8 +1676,8 @@ var config = {
 },
   
 {
-			group: 'PRI',
-			title: 'PP-1',
+			group: 'Test',
+			title: 'TestPRI PP-1',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs1.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -2875,8 +1733,8 @@ var config = {
 },
   
 {
-			group: 'PRI',
-			title: 'Propietari provisional0',
+			group: 'Test',
+			title: 'PRIPropietari provisional0',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -3378,8 +2236,8 @@ var config = {
 },
   
 {
-			group: 'PRI',
-			title: 'Propietari provisional1',
+			group: 'Test',
+			title: 'PRIPropietari provisional1',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/cs2.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -3434,8 +2292,8 @@ var config = {
 
 },
 		{
-			group: 'PRI',
-			title: 'Propietari provisional2',
+			group: 'Test',
+			title: 'PRIPropietari provisional2',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/pp.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -3481,8 +2339,8 @@ var config = {
 			}
 },
 		{
-			group: 'PRI',
-			title: 'Propietari provisional4',
+			group: 'Test',
+			title: 'PRI Propietari provisional4',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/PRI2.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/img/base/pp.svg',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -3946,7 +2804,7 @@ var config = {
 
  {
 
-   group: '100-400',
+   group: 'Test',
    title: 'CS-100-4005',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
@@ -4096,7 +2954,7 @@ var config = {
 },
  {
 
-   group: '100-400',
+   group: 'Test',
    title: 'CS-100-4004',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/100-400.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
@@ -4243,8 +3101,8 @@ var config = {
 },
  {
 
-   group: 'Primària',
-   title: 'Test',
+   group: 'Test',
+   title: 'Primària Test',
    geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria.geojson',
    iconSrc:'https://raw.githubusercontent.com/yopaseopor/beta_preset_josm/master/ES/traffic_signs/ES/ES_B1a.png',
    iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -4318,8 +3176,8 @@ var config = {
    
 },
 		{
-			group: 'Primària',
-			title: 'No',
+			group: 'Test',
+			title: 'Primària No',
 	geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
 	iconStyle: 'background-color:rgba(0,255,0,1)',
@@ -4356,8 +3214,8 @@ var config = {
 },
  {
 
-   group: 'Primària',
-   title: 'Sí',
+   group: 'Test',
+   title: 'Primària Sí2',
 	geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria.geojson',
 	iconSrc: imgSrc + 'base/circle.svg',
 	iconStyle: 'background-color:rgba(0,255,0,1)',
@@ -4432,8 +3290,8 @@ var config = {
 },
 	
 		{
-			group: 'Primària',
-			title: 'Sí',
+			group: 'Test',
+			title: 'Primària Sí',
 			geojson: 'https://raw.githubusercontent.com/yopaseopor/mapaplacesedu/main/src/primaria.geojson',
 			iconSrc: imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(0,255,0,1)',
