@@ -80,7 +80,7 @@ var config = {
 			source: new ol.source.TileJSON({
         tileSize: 512,
         crossOrigin: 'anonymous',
-        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg'
+        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=zPfUiHM0YgsZAlrKRPNg'
       }),
 			visible: false
 		}),
