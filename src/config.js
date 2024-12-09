@@ -70,6 +70,8 @@ var config = {
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
         format: new ol.format.TopoJSON(),
         url: 'http://{a-c}.tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson'
+      }),
+			visible: false
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
