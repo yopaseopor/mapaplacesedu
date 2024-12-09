@@ -61,6 +61,18 @@ var config = {
 			}),
 			visible: false
 		}),
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'OpenStreetMap France',
+			iconSrc: imgSrc + 'osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.MVT(),
+        url: '/geoserver/gwc/service/tms/1.0.0/' + layer +
+            '@EPSG%3A'+projection_epsg_no+'@pbf/{z}/{x}/{-y}.pbf'
+      }),
+			visible: false
+		}),
 		new ol.layer.Tile({
 			title: 'OpenMapSurfer',
 			iconSrc: imgSrc + 'openroute_logo_layer.png',
