@@ -67,9 +67,8 @@ var config = {
 			source: new ol.source.VectorTile({
         tilePixelRatio: 1, // oversampling when > 1
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.MVT(),
-        url: '/geoserver/gwc/service/tms/1.0.0/' + layer +
-            '@EPSG%3A'+projection_epsg_no+'@pbf/{z}/{x}/{-y}.pbf'
+        format: new ol.format.TopoJSON(),
+        url: 'http://{a-c}.tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson'
       }),
 			visible: false
 		}),
