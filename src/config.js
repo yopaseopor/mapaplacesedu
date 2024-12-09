@@ -89,7 +89,7 @@ var config = {
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'TileJSON',
+			title: 'TileJSON2',
 			iconSrc: imgSrc + 'osmfr_logo-layer.png',
 			source: new ol.source.TileJSON({
         tileSize: 512,
