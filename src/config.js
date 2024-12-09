@@ -61,6 +61,7 @@ var config = {
 			}),
 			visible: false
 		}),
+		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'OpenStreetMap France2',
 			iconSrc: imgSrc + 'osmfr_logo-layer.png',
@@ -69,9 +70,20 @@ var config = {
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
         format: new ol.format.TopoJSON(),
         url: 'http://{a-c}.tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson'
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'OpenStreetMap France3',
+			iconSrc: imgSrc + 'osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.TopoJSON(),
+        url: 'https://vector.openstreetmap.org/shortbread_v1/tilejson.json'
       }),
 			visible: false
 		}),
+		
 		new ol.layer.Tile({
 			title: 'OpenMapSurfer',
 			iconSrc: imgSrc + 'openroute_logo_layer.png',
