@@ -61,6 +61,20 @@ var config = {
 			}),
 			visible: false
 		}),
+		new ol.source.TileVector({
+			format: new ol.format.TopoJSON({
+          defaultProjection: 'EPSG:4326'
+        }),
+			title: 'OpenMapSurfer',
+			iconSrc: imgSrc + 'openroute_logo_layer.png',
+			projection: 'EPSG:3857',
+        tileGrid: new ol.tilegrid.XYZ({
+          maxZoom: 19
+        }),
+        url: 'http://{a-c}.tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson'
+			}),
+			visible: false
+		}),
 		new ol.layer.Tile({
 			title: 'OpenMapSurfer',
 			iconSrc: imgSrc + 'openroute_logo_layer.png',
