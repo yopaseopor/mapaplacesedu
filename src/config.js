@@ -62,7 +62,7 @@ var config = {
 			visible: false
 		}),
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'OpenStreetMap France',
+			title: 'OpenStreetMap France2',
 			iconSrc: imgSrc + 'osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
         tilePixelRatio: 1, // oversampling when > 1
