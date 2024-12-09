@@ -69,10 +69,10 @@ var config = {
 			iconSrc: imgSrc + 'openroute_logo_layer.png',
 			projection: 'EPSG:3857',
         tileGrid: new ol.tilegrid.XYZ({
-          maxZoom: 19
+          maxZoom: 19,
+		          url: 'http://{a-c}.tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson'
         }),
-        url: 'http://{a-c}.tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson'
-			}),
+
 			visible: false
 		}),
 		new ol.layer.Tile({
