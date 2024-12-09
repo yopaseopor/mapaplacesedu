@@ -69,6 +69,7 @@ var config = {
         tilePixelRatio: 1, // oversampling when > 1
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
         format: new ol.format.MVT(),
+		crossOrigin: 'anonymous',
         url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
       }),
 			visible: false
