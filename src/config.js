@@ -63,7 +63,7 @@ var config = {
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector Tile2',
+			title: 'Vector Tile3',
 			iconSrc: imgSrc + 'osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
         tilePixelRatio: 1, // oversampling when > 1
@@ -94,7 +94,7 @@ var config = {
 			source: new ol.source.TileJSON({
         tileSize: 512,
         crossOrigin: 'anonymous',
-        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=zPfUiHM0YgsZAlrKRPNg'
+        url: 'https://vector.openstreetmap.org/shortbread_v1/tilejson.json'
       }),
 			visible: false
 		}),
