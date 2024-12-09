@@ -61,18 +61,28 @@ var config = {
 			}),
 			visible: false
 		}),
-		new ol.source.TileVector({
-			format: new ol.format.TopoJSON({
+		new ol.layer.Tile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'OpenStreetMap France',
+			iconSrc: imgSrc + 'osmfr_logo-layer.png',
+			source: new ol.source.TileVector({
+        format: new ol.format.TopoJSON({
           defaultProjection: 'EPSG:4326'
         }),
+        projection: 'EPSG:3857',
+        tileGrid: new ol.tilegrid.XYZ({
+          maxZoom: 19
+        }),
+        url: 'http://{a-c}.tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson'
+			}),
+			visible: false
+		}),
+		new ol.layer.Tile({
 			title: 'OpenMapSurfer',
 			iconSrc: imgSrc + 'openroute_logo_layer.png',
-			projection: 'EPSG:3857',
-        tileGrid: new ol.tilegrid.XYZ({
-          maxZoom: 19,
-		          url: 'http://{a-c}.tile.openstreetmap.us/vectiles-water-areas/{z}/{x}/{y}.topojson'
-        }),
-
+			source: new ol.source.XYZ({
+				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>, powered by <a href="https://mapsurfernet.com/" target="_blank">MapSurfer.NET</a>',
+				url: 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png'
+			}),
 			visible: false
 		}),
 		new ol.layer.Tile({
