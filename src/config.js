@@ -62,41 +62,16 @@ var config = {
 			visible: false
 		}),
 		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector Tile3',
-			iconSrc: imgSrc + 'osmfr_logo-layer.png',
-			source: new ol.source.VectorTile({
-        tilePixelRatio: 1, // oversampling when > 1
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.MVT(),
-		crossOrigin: 'anonymous',
-		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
-      }),
+				new ol.layer.Tile({
+			title: 'ES_CAT_ICGC - Actual',
+			iconSrc: imgSrc + 'logo_icgc.png',
+			source: new ol.source.TileWMS({
+				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; ICGC &mdash; Source: ICGC',
+				url: 'https://geoserveis.icgc.cat/icc_mapesbase/wms/service?',
+				params: {'LAYERS': 'orto25c', 'VERSION': '1.1.1'}
+			}),
 			visible: false
-		}),
-		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector Tile',
-			iconSrc: imgSrc + 'osmfr_logo-layer.png',
-			source: new ol.source.VectorTile({
-        tilePixelRatio: 1, // oversampling when > 1
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.TopoJSON(),
-        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg'
-      }),
-			visible: false
-		}),
-		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'TileJSON2',
-			iconSrc: imgSrc + 'osmfr_logo-layer.png',
-			source: new ol.source.TileJSON({
-        tileSize: 512,
-        crossOrigin: 'anonymous',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/tilejson.json'
-      }),
-			visible: false
+
 		}),
 		
 		new ol.layer.Tile({
